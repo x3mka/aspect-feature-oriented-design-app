@@ -1,0 +1,40 @@
+.HeaderTopBar__user {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTopBar__user-inner {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.HeaderTopBar__user-welcome,
+.HeaderTopBar__user-name {
+  padding-right: 0.25rem;
+  display: inline-block;
+  font-size: $font-size-sm;
+  color: $gray-600;
+}
+
+.HeaderTopBar__user-name {
+  padding-right: 0.5rem;
+  font-weight: $font-weight-bold;
+}
+
+.HeaderTopBar__user-gravatar {
+  height: 39px;
+  width: 39px;
+  border-radius: 50%;
+}
+
+.HeaderTopBar__user:hover {
+  .HeaderTopBar__user-inner {
+    background-color: $gray-200;
+  }
+}

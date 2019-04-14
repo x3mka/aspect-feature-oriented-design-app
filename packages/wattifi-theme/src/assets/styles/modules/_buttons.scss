@@ -1,0 +1,33 @@
+.btn {
+  &.btn-upper {
+    text-transform: uppercase;
+  }
+
+  &.btn-bold {
+    font-weight: $font-weight-bold;
+  }
+
+  &.btn-font-sm {
+    font-size: $font-size-sm;
+  }
+
+  &.btn-clean {
+    border: 0;
+    background: transparent;
+    color: $gray-600;
+  }
+
+  &.btn-icon {
+    height: 2.35rem;
+    width: 2.35rem;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.btn-sm {
+      height: 31px;
+      width: 31px;
+    }
+  }
+}

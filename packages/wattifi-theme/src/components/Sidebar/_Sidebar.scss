@@ -1,0 +1,210 @@
+.Sidebar {
+  width: $sidebar-width;
+  background-color: $sidebar-bg;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $sidebar-zindex-fixed;
+}
+
+.Sidebar__header {
+  height: $header-height;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Sidebar__toggler {
+  display: inline-block;
+  position: relative;
+  height: 26px;
+  width: 26px;
+  transition: all .4s ease;
+
+  span {
+    &,
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      background: darken(#fff, 10%);
+      border-radius: 2px;
+      transition: all .4s ease;
+    }
+
+    top: 12px;
+    height: 2px;
+    min-height: 2px;
+    width: 100%;
+
+    &::before,
+    &::after {
+      left: auto;
+      right: 0px;
+      height: 2px;
+      min-height: 2px;
+      content: "";
+    }
+
+    &:before {
+      width: 50%;
+      top: -8px;
+    }
+
+    &::after {
+      width: 75%;
+      bottom: -8px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    span {
+      &,
+      &::before,
+      &::after {
+        background: #fff;
+      }
+
+      &::before,
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.Sidebar__body {
+  padding-top: 2rem;
+}
+
+.Sidebar__logo {
+  width: 100%;
+
+  img {
+    width: 50px;
+  }
+}
+
+.Sidebar__actions {
+  display: flex;
+}
+
+.Sidebar__links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.Sidebar__link {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  color: $gray-200;
+  @include font-size(0.95rem);
+
+  i {
+    width: 30px;
+    color: $gray-200;
+  }
+
+  span {
+    flex-grow: 1;
+  }
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: $sidebar-link-hover-bg;
+
+    i {
+      color: #9c3;
+    }
+  }
+
+  &.active {
+    background-color: $sidebar-link-hover-bg;
+    color: white;
+
+    i {
+      color: white;
+    }
+  }
+}
+
+// Modifers
+
+.Sidebar--collapsed {
+  .Sidebar {
+    width: $sidebar-collapse-width;
+    transition: width 0.3s ease;
+  }
+
+  .Sidebar__actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .Sidebar__logo {
+    display: none;
+  }
+
+  .Sidebar__toggler {
+    span {
+      &:before,
+      &::after {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+
+  .Sidebar__link {
+    justify-content: center;
+
+    i {
+      width: auto;
+    }
+
+    span {
+      width: 0;
+      opacity: 0;
+      overflow: hidden;
+      text-indent: -9999px;
+      flex-grow: 0;
+      transition: all 0.1s ease;
+    }
+  }
+
+  &.Sidebar--collapsed-hover {
+    .Sidebar {
+      width: $sidebar-width;
+    }
+
+    .Sidebar__actions {
+      justify-content: flex-end;
+      widows: auto;
+    }
+
+    .Sidebar__logo {
+      display: block;
+    }
+
+    .Sidebar__link {
+      i {
+        width: 30px;
+      }
+
+      span {
+        width: auto;
+        opacity: 1;
+        text-indent: 0;
+        flex-grow: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import '../../../../../node_modules/bootstrap/scss/functions';
+@import '../../../../../node_modules/bootstrap/scss/variables';
+
+$blue:                      #00aeff;
+$bg:                        #f2f3f8;
+
+$blue-200:                    lighten($blue, 32%);
+$blue-300:                    lighten($blue, 28%);
+$blue-400:                    lighten($blue, 24%);
+$blue-500:                    lighten($blue, 20%);
+$blue-600:                    lighten($blue, 16%);
+$blue-700:                    lighten($blue, 12%);
+$blue-800:                    lighten($blue, 8%);
+$blue-900:                    lighten($blue, 4%);
+
+$secondary:                 #e1e1ef;
+$success:                   #1dc9b7;
+$info:                      #5578eb;
+$danger:                    #eb4d4b;
+
+$font-family-sans-serif:      'Poppins', sans-serif;
+$font-weight-normal:          300;
+$font-weight-bold:            500;
+$font-weight-bolder:          700;
+
+$sidebar-width:               260px;
+$sidebar-bg:                  $blue;
+$sidebar-link-hover-bg:       darken($blue, 6%);
+
+$header-height:               75px;
+
+$font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+
+$border-radius:               .2rem;
+$border-radius-lg:            .25rem;
+$border-radius-sm:            .15rem;
+
+$input-btn-focus-width:       .1rem;
+
+$table-color:                 #646c9a;
+$table-border-color:            $gray-200;
+
+// Alerts
+
+$alert-bg-level:                    0;
+$alert-border-level:                0;
+$alert-color-level:                 -10;
+
+
+// Custom Variables
+//-----------------
+
+$sidebar-collapse-width: 80px;
+$sidebar-zindex-fixed: 1080;
+
+$cn-box-shadow: 0px 0px 13px 0px rgba(82,63,105,0.05);

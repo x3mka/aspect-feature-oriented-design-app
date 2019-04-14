@@ -1,0 +1,46 @@
+.table {
+  thead {
+    th {
+      border-bottom-width: 1px;
+    }
+  }
+
+  th {
+    font-weight: $font-weight-bold;
+    border-top: none;
+    vertical-align: middle;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+}
+
+.ReactTable {
+  border: none;
+}
+
+.ReactTable .rt-thead.-header {
+  box-shadow: none;
+  border-bottom: 1px solid $gray-200;
+}
+
+.ReactTable .rt-thead .rt-tr {
+  text-align: left;
+}
+
+.ReactTable .rt-thead .rt-th {
+  font-weight: $font-weight-bold;
+}
+
+.ReactTable .rt-thead .rt-th,
+.ReactTable .rt-thead .rt-td,
+.ReactTable .rt-tbody .rt-td {
+  border-right: none;
+}
+
+.ReactTable .-pagination {
+  padding: 0.5rem 0;
+  box-shadow: none;
+  border-top: 1px solid $gray-200;
+}

@@ -1,0 +1,27 @@
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(
+      theme-color-level($color, $alert-bg-level),
+      theme-color-level($color, $alert-border-level),
+      #fff
+    );
+  }
+}
+
+.alert-secondary {
+  &,
+  .alert-link {
+    color: $gray-900;
+  }
+}
+
+.alert-light {
+  &,
+  .alert-link {
+    color: $gray-700;
+  }
+}

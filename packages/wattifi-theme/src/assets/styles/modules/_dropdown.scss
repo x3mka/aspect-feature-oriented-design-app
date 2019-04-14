@@ -1,0 +1,12 @@
+.dropdown-menu {
+  margin: 0;
+  border: 0;
+}
+
+.dropdown-menu--unround {
+  border-radius: 0;
+}
+
+.dropdown-menu--anim {
+  animation: bd-fade-in .3s ease 1, dropdown-menu-move-up .3s ease-out 1;
+}
