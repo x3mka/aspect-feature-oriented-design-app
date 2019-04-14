@@ -1,7 +1,36 @@
 {
-  "name": "root",
-  "private": true,
-  "devDependencies": {
-    "lerna": "^3.13.1"
-  }
+	"name": "root",
+	"private": true,
+  "scripts": {
+    "start": "cd ./packages/wattifi-app && npm start"
+  },
+	"devDependencies": {
+		"lerna": "^3.13.1"
+	},
+	"dependencies": {
+		"@babel/core": "^7.4.3",
+		"@babel/node": "^7.2.2",
+		"@babel/preset-env": "^7.4.3",
+		"@babel/preset-react": "^7.0.0",
+		"apollo-cache-inmemory": "^1.5.1",
+		"apollo-client": "^2.5.1",
+		"auth0-js": "^9.10.1",
+		"bootstrap": "^4.3.1",
+		"customize-cra": "^0.2.12",
+		"graphql": "^14.2.1",
+		"graphql-tag": "^2.10.1",
+		"jquery": "^3.3.1",
+		"jwt-decode": "^2.2.0",
+		"node-sass": "^4.11.0",
+		"react": "^16.8.6",
+		"react-apollo": "^2.5.4",
+		"react-app-rewired": "^2.1.1",
+		"react-dom": "^16.8.6",
+		"react-router-dom": "^5.0.0",
+		"react-scripts": "2.1.8",
+		"react-spinkit": "^3.0.0",
+		"reactstrap": "^7.1.0",
+		"recompose": "^0.30.0",
+		"store": "^2.0.12"
+	}
 }
